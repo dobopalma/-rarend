@@ -1,59 +1,63 @@
 <html>
-<head>
-</head>
-<body bgcolor="grey">
-    <h1><center>Animáció</center></h1>
-<svg width="1500" height="700">
-        <circle id="x" cx="137" cy="360.96999999999116" r="40" stroke="black" stroke-width="1" fill="lightblue"></circle>
-</svg>
-
-
-<script>
-    x = 80
-    y = 80
-    xí = 1
-    yí = 1
-    setInterval( () => {
-        document.getElementById("x").setAttribute("cx", x)
-        document.getElementById("x").setAttribute("cy", y)
-        x += xí
-        y+= yí
-        if (x>640 || x < 60) xí = -xí
-        if (y>440 || y < 60) yí = -yí
-    }, 10)
-</script>
-
-<script>
-    x = 50
-    y = 350
-    xi = 1
-    yi = 0
-    setInterval(()=>{
-        x += xi
-        y += yi
-        if (x>950 || x<50) xi = -xi
-        if (y>650 || y<50) yi = -yi
-        yi += 0.01
-        document.getElementById("x").setAttribute("cx", x)
-        document.getElementById("x").setAttribute("cy", y)
-
-    },1)
-    function g(e) {
-        document.getElementById("f").setAttribute("cx", e.x)
-    }
-</script>
-<style>
-    a{
-        width: 150px;
-        margin: 0 10px;
-        color: white;
-        padding: 12px 0;
-        border: .5px solid white
-     }
-</style>
-<br>
- 
-<a href="Feladatok.html"><span></span>Ugrás vissza</a>
-
+    <center><head>Animáció</head></center>
+<body>
+    <div id="o1"></div>
 </body>
+<style>
+    body {
+        height: 100px;
+        background-color: rgb(186, 221, 219);
+        font-size: 60px;
+    }
+    #o1 {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background-color: rgb(67, 122, 185);
+        box-shadow: 1px 1px 3px black;
+        transition: 20s;
+        animation-name: a1;
+        position: absolute;
+        left: 50%;
+        top: 2%;
+        animation: a1 10s infinite;
+    }
+    @keyframes a1 {
+        0% {
+            left: 2%;
+            top: 50%;
+            background-color: red;
+        }
+        20% {
+            left: 70%;
+            top: 90%;
+            background-color: rgb(255, 115, 0);
+            width: 60px;
+        }
+        40% {
+            left: 70%;
+            top: 10%;
+            background-color: yellow;
+            width: 150px;
+        }
+        60% {
+            left: 10%;
+            top: 90%;
+            background-color: rgb(12, 236, 12);
+        }
+        80% {
+            left: 10%;
+            top: 10%;
+            background-color: rgb(0, 195, 255);
+            border-radius: 50px;
+        }
+        100% {
+            left: 2%;
+            top: 50%;
+            background-color: rgb(95, 5, 95);
+            width: 60px;
+        }
+    }
+</style>
 </html>
