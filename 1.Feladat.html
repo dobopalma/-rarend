@@ -1,11 +1,12 @@
 <html>
-    <center><head>a = int(input("Befogó: "))
-        c = int(input("Befogó: "))<br>
-        b = (a * a + c * c) ** (1 / 2)<br>
-        k = a + b + c<br>
-        t = a * b / 2<br>
-        print(f"A háromszög kerülete: {k}")<br>
-        print(f"A háromszög területe: {t}")</center></head>
+l = list(map(lambda x: list(map(int, x.split(";"))), open("input.txt").read().split("\n")))
+o0 = 0
+r = [i for i in l[0] if not i % 2 ]
+for i in r:
+    o0 += i ** 2
+print(o0)
+
+print(sum([i for i in l[3] if i <9]))
 </html>
 <br>
 <a href="Feladat5.html">Ugrás vissza</a>
