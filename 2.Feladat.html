@@ -1,8 +1,6 @@
 <html>
-    <center><head>l = [5,12,32,43,23,12,32,43,54,65,23,1,2,34]<br>
-        l.sort()<br>
-        l2 = ", ".join(list(map(str, l)))<br>
-        print(l2)</head></center>
+l = list(map(lambda x: list(map(int, x.split("!"))), open("input.txt").read().split("\n")))
+print(min(list(filter(lambda x: not x % 3, l[1]))))
 </html>
 <br>
 <a href="Feladat5.html">Ugrás vissza</a>
