@@ -1,12 +1,10 @@
 <html>
-l = list(map(lambda x: list(map(int, x.split(";"))), open("input.txt").read().split("\n")))<br>
-o0 = 0<br>
-r = [i for i in l[0] if not i % 2 ]<br>
-for i in r:<br>
-    o0 += i ** 2<br>
-print(o0)<br>
-
-print(sum([i for i in l[3] if i <9]))
+l = list(map(lambda x: list(map(int, x.split("!"))), open("input.txt").read().split("\n")))
+l = l[0]
+o0 = 0
+for i in l:
+    o0 += i ** 2 if i % 2 else 0
+print(o0)
 </html>
 <br>
 <a href="Feladat5.html">Ugrás vissza</a>
