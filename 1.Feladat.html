@@ -1,9 +1,10 @@
 <html>
-l = list(map(lambda x: list(map(int, x.split("!"))), open("input.txt").read().split("\n")))<br>
+l = list(map(lambda x: list(map(int, x.split(";"))), open("input.txt").read().split("\n")))<br>
 l = l[0]<br>
 o0 = 0<br>
 for i in l:<br>
-    o0 += i ** 2 if i % 2 else 0<br>
+    if i > 19:<br>
+        o0 += i<br>
 print(o0)
 </html>
 <br>
